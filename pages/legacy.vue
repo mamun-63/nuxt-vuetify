@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mx-8">
     <v-switch
       v-model="$vuetify.theme.dark"
       hint="This toggles the global state of the Vuetify theme"
@@ -7,6 +7,15 @@
       label="Vuetify Theme Dark"
       persistent-hint
     />
+
+    <v-row>
+      <v-col>
+        <v-card v-for="data in cardData" :key="data.title">
+          <p>{{ data.title }}</p>
+          <p>{{ data.date }}</p>
+        </v-card>
+      </v-col>
+    </v-row>
 
     <v-row>
       <v-col cols="12" sm="6" md="4">
@@ -260,12 +269,16 @@
 
 <script>
 export default {
-  cardData: [
-    { title: 'US ELECTION' },
-    { date: '13 Oct, 2020' },
-    { heading: 'Trump’s biggest campaign promises: Did he deliver?' },
-    { description: 'With just a day of campaigning left, the two candidates rally in key states as the bitter presidential race nears an end.' },
-    { src: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg' }
-  ]
+  data () {
+    return {
+      cardData: [
+        { title: 'US ELECTION' },
+        { date: '13 Oct, 2020' },
+        { heading: 'Trump’s biggest campaign promises: Did he deliver?' },
+        { description: 'With just a day of campaigning left, the two candidates rally in key states as the bitter presidential race nears an end.' },
+        { src: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg' }
+      ]
+    }
+  }
 }
 </script>
