@@ -1,5 +1,6 @@
 <template>
   <div class="mx-8">
+    <a href="/">Hey</a>
     <v-switch
       v-model="$vuetify.theme.dark"
       hint="This toggles the global state of the Vuetify theme"
@@ -207,7 +208,7 @@
     <p class="overline">
       Overline
     </p>
-    <p class="body 1-2">
+    <p class="body-1">
       Body 1 and 2
     </p>
     <p class="subtitle-2">
