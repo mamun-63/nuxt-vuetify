@@ -16,7 +16,8 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     // SCSS file in the project
-    '@/assets/css/main.scss'
+    '@/assets/css/main.scss',
+
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -47,7 +48,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     treeShake: true,
-    optionsPath: './vuetify.options.js',
+    optionsPath: './vuetify.options.js'
     // options: {
     //   customProperties: true
     // }
